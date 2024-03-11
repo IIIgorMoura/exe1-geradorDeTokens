@@ -1,26 +1,11 @@
-import { View, Text, StyleSheet,Image } from "react-native";
+import { NavigationContainer } from '@react-navigation/native'
+import { Routes } from './routes'
 
 export default function App() {
-  return(
-    <View style={Style.container}>
-        <Image source={require("./assets/logo.png")} style={Style.logo}/>
-        
-        <Text>
-          Arroz
-        </Text>
-    </View>
+
+  return (
+    <NavigationContainer>
+      <Routes />
+    </NavigationContainer>
   )
 }
-
-const Style = StyleSheet.create({
-  container:{
-    flex: 1,
-    backgroundColor: "#f3f3f3",
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-
-  logo: {
-    marginBottom: 60,
-  },
-});
