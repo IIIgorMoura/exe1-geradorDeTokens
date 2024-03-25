@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home } from './pages/index';
-import { PaginaSenhas } from "./pages/paginaSenhas";
+import { Perfil } from "./pages/perfil";
 import { Ionicons } from '@expo/vector-icons/';
 
 const Tab = createBottomTabNavigator();
@@ -16,23 +16,23 @@ export function Routes() {
                     headerShown: false,
                     tabBarIcon: ({ focused }) => {
                         if (focused) {
-                            return (<Ionicons size={25} color={"#000"} name="home" />)
+                            return (<Ionicons size={25} color={"#7709E5"} name="home" />)
                         }
-                        return (<Ionicons size={20} color={"#000"} name="home-outline" />)
+                        return (<Ionicons size={20} color={"#000"} name="home" />)
                     }
                 }}
             />
             <Tab.Screen
-                name="paginaSenhas"
-                component={PaginaSenhas}
+                name="perfil"
+                component={Perfil}
                 options={{
                     tabBarShowLabel: false,
                     headerShown: false,
                     tabBarIcon: ({ focused }) => {
                         if (focused) {
-                            return (<Ionicons size={25} color={"#000"} name="lock-closed" />)
+                            return (<Ionicons size={25} color={"#7709E5"} name="person" />)
                         }
-                        return (<Ionicons size={20} color={"#000"} name="lock-closed-outline" />)
+                        return (<Ionicons size={20} color={"#000"} name="person" />)
                     }
                 }}
             />

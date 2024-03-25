@@ -1,47 +1,31 @@
-import { View, Text, StyleSheet, Image } from "react-native";
-import Slider from "@react-native-community/slider";
+import { View, StyleSheet, Text} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export function Home() {
     return (
-        <View style={Style.container}>
-            <Image source={require("../assets/logo.png")} style={Style.logo} />
-
-            <Text>
-                Arroz
-            </Text>
-
-            <View style={Style.area}>
-                <Slider style={{ height: 50 }}
-                    
-                    minimumValue={6}
-                    maximumValue={20}
-
-                    minimumTrackTintColor="#ff0000"
-                    maximumTrackTintColor="#000"
-                    thumbTintColor="#392de9" />
-            </View>
+        // <SafeAreaView style={{ flex: 1 }}>
+        //     <View style={ESTILO.header}>
+        //         <Text style={ESTILO.title}>
+        //             Meu perfil
+        //         </Text>
+        //     </View>
+        // </SafeAreaView>
+        <View>
+            
         </View>
     )
 }
 
-const Style = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#f3f3f3",
-        justifyContent: 'center',
-        alignItems: 'center'
+const ESTILO = StyleSheet.create({
+    header: {
+        padding: 14,
+        paddingTop: 58,
+        backgroundColor: "#392de9"
     },
-
-    logo: {
-        marginBottom: 60
-    },
-
-    area: {
-        marginBottom: 14,
-        marginTop: 14,
-        width: "80%",
-        backgroundColor: "#FFF",
-        borderRadius: 8,
-        padding: 8
+    title: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "#FFF"
     }
-});
+
+})
